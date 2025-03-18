@@ -23,3 +23,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
+
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Connexion réussie au backend !" });
+});
